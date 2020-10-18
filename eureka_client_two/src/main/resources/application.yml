@@ -1,0 +1,12 @@
+server:
+  port: 8675
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://localhost:8763/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${server.port}
+spring:
+  application:
+    name: client2
